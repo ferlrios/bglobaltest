@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BGlobal.Models.Vehicle>
+@{
+    ViewData["Title"] = "Página principal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Listado de vehículos:</p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Patente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puertas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dueño)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puertas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dueño)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
