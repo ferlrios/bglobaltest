@@ -23,7 +23,7 @@ namespace BGlobal.Controllers
             _context = context;
         }
 
-
+        //En el index listamos todos los vehiculos en la base de datos
         public async Task<IActionResult> Index()
         {
             var vehicles = await _context.Vehicles.ToListAsync();
@@ -52,11 +52,13 @@ namespace BGlobal.Controllers
             return View();
         }
 
+        //Vista confirmando que la subida fue realizada
         public IActionResult CreateSucceeded()
         {
             return View();
         }
 
+        //Devuelve los datos de la API en una Lista de "usuarios"(modelo data).
         public async Task<List<data>> ConsumirApi()
         {
             List<data> _dueños = new List<data>();

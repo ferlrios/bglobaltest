@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace BGlobal.Models
 {
+    //Modelo del JSON para recibir los datos de la API
     public class Post
     {
         public int page{ get; set; }
